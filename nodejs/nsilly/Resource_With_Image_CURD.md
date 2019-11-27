@@ -1,5 +1,118 @@
 # Resource With Image 
 
+## APIs
+
+Get all templates
+```
+curl -X GET \
+  http://localhost:3000/api/v1/templates \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 92' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:3000' \
+  -H 'cache-control: no-cache'
+```
+Create new template
+```
+curl -X POST \
+  http://localhost:3000/api/v1/templates \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 190' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:3000' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"name":"umbala",
+	"short_description": "Short Description",
+	"description": "Description",
+	"sku": "sku",
+	"images": [{"type": "1", "url": "https://webpress.vn/assets/images/wp-1.png"}]
+}'
+```
+Edit Template
+```
+curl -X PUT \
+  http://localhost:3000/api/v1/templates/1 \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 190' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:3000' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"name":"umbala",
+	"short_description": "Short Description",
+	"description": "Description",
+	"sku": "sku",
+	"images": [{"type": "1", "url": "https://webpress.vn/assets/images/wp-1.png"}]
+}'
+```
+Edit status
+
+```
+curl -X PUT \
+  http://localhost:3000/api/v1/templates/2/status \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 16' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:3000' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"status": 2
+}'
+```
+
+Get Template
+```
+curl -X GET \
+  http://localhost:3000/api/v1/templates/1 \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 92' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:3000' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"name":"localhost",
+	"ip": "127.0.0.1",
+	"docker_swarm_id": "it2o4jak9j4ezfhgzcv8j61k1"
+}'
+```
+Delete Template
+```
+curl -X DELETE \
+  http://localhost:3000/api/v1/templates/1 \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 92' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:3000' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"name":"localhost",
+	"ip": "127.0.0.1",
+	"docker_swarm_id": "it2o4jak9j4ezfhgzcv8j61k1"
+}'
+```
+
+
+
+## Files
 ```
  app/Models/Image.js                                                
  app/Models/Template.js                                             
