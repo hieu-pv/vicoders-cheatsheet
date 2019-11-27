@@ -98,11 +98,7 @@ curl -X DELETE \
   -H 'Content-Length: 92' \
   -H 'Content-Type: application/json' \
   -H 'Host: localhost:3000' \
-  -H 'cache-control: no-cache' \
-  -d '{
-	"name":"localhost",
-	"ip": "127.0.0.1",
-	"docker_swarm_id": "it2o4jak9j4ezfhgzcv8j61k1"
+  -H 'cache-control: no-cache' 
 }'
 ```
 
