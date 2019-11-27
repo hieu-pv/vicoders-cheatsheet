@@ -1,6 +1,6 @@
 # Resource With Image 
 
-```
+```js
  app/Models/Image.js                                                
  app/Models/Template.js                                             
  app/Repositories/ImageRepository.js                                
@@ -15,7 +15,7 @@
 ```
 
 /app/Models/Image.js
-```
+```js
 import Sequelize from 'sequelize';
 import sequelize from '../../config/sequelize';
 
@@ -59,7 +59,7 @@ export default Image;
 
 /app/Models/Template.js
 
-```
+```js
 import Sequelize from 'sequelize';
 import sequelize from '../../config/sequelize';
 import Image from './Image';
@@ -127,7 +127,7 @@ export default Template;
 
 /app/Repositories/ImageRepository.js 
 
-```
+```js
 import { Repository } from './Repository';
 import Image from '../Models/Image';
 
@@ -139,7 +139,7 @@ export default class ImageRepository extends Repository {
 ```
 /app/Repositories/TemplateRepository.js
 
-```
+```js
 import { Repository } from './Repository';
 import Template from '../Models/Template';
 
@@ -151,7 +151,7 @@ export default class TemplateRepository extends Repository {
 ```
 /app/Transformers/ImageTransformer.js
 
-```
+```js
 import Transformer from './Transformer';
 
 export default class ImageTransformer extends Transformer {
@@ -169,7 +169,7 @@ export default class ImageTransformer extends Transformer {
 ```
 /app/Transformers/TemplateTransformer.js
 
-```
+```js
 import Transformer from './Transformer';
 import ImageTransformer from './ImageTransformer';
 
@@ -193,7 +193,7 @@ export default class TemplateTransformer extends Transformer {
 ```
 /app/Validators/TemplateValidator.js
 
-```
+```js
 import { AbstractValidator, REQUIRED, IS_INT } from './Validator';
 import { Exception } from '@nsilly/exceptions';
 import _ from 'lodash';
@@ -241,7 +241,7 @@ export class TemplateValidator extends AbstractValidator {
 ```
 /database/migrations/20191125_103228_create_templates_table.js
 
-```
+```js
 'use strict';
 
 module.exports = {
@@ -306,7 +306,7 @@ module.exports = {
 ```
 /database/migrations/20191126_155553_create_images_table.js
 
-```
+```js
 'use strict';
 
 module.exports = {
@@ -359,7 +359,7 @@ module.exports = {
 
 /routes/api/v1/templates.js
 
-```
+```js
 import express from 'express';
 import { AsyncMiddleware, Request } from '@nsilly/support';
 import TemplateRepository from '../../../app/Repositories/TemplateRepository';
