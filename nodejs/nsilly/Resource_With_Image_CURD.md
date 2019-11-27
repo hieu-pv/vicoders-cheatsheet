@@ -1,6 +1,6 @@
 # Resource With Image 
 
-```js
+```
  app/Models/Image.js                                                
  app/Models/Template.js                                             
  app/Repositories/ImageRepository.js                                
