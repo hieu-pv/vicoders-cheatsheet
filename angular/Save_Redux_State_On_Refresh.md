@@ -112,7 +112,7 @@ In reducer file we just need to restore data that is saved to localStorage befor
 
 `reducers.ts`
 
-```
+```javascript
 import * as _ from 'lodash';
 import { combineReducers } from 'redux';
 
