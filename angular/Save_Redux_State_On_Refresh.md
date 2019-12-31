@@ -52,7 +52,7 @@ This guide will describle how to save redux state to `localStorage` and restore 
 
 ### Listen on state change
 
-Insert the code bellow to an controller `{component}.component.ts`
+Insert the code bellow to a controller `{component}.component.ts`
 
 For example
 
